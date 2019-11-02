@@ -1,7 +1,6 @@
 .DS_Store
 .idea/
 count.out
-test/data/*.xlsx
 vendor/
 xlsx2sql
 !xlsx2sql/

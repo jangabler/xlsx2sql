@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="mapping.xsd">
+    <xlsx globPattern="test/data/spreadsheet*.xlsx">
+        <worksheet name="Sheet1">
+            <cell coordinate="A1" refAttribute="attr1"/>
+            <cell coordinate="B1" refAttribute="attr2"/>
+            <cell coordinate="C1" refAttribute="attr3"/>
+        </worksheet>
+    </xlsx>
+    <sql database="db1" table="table1">
+        <attribute name="attr1" dataType="string"/>
+        <attribute name="attr2" dataType="integer"/>
+        <attribute name="attr3" dataType="boolean"/>
+    </sql>
+</mapping>

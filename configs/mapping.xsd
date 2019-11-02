@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<!-- ####################################################################### -->
+<!-- # ROOT                                                                # -->
+<!-- ####################################################################### -->
+    <xs:element name="mapping">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="xlsx"/>
+                <xs:element ref="sql"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+
+<!-- ####################################################################### -->
+<!-- # XLSX                                                                # -->
+<!-- ####################################################################### -->
+    <xs:element name="xlsx">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="worksheet" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="globPattern" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="worksheet">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="cell" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="name" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:element name="cell">
+        <xs:complexType>
+            <xs:attribute name="coordinate"   type="xs:string" use="required"/>
+            <xs:attribute name="refAttribute" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+
+
+<!-- ####################################################################### -->
+<!-- # SQL                                                                 # -->
+<!-- ####################################################################### -->
+    <xs:element name="sql">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="attribute" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="database" type="xs:string" use="required"/>
+            <xs:attribute name="table"    type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="attribute">
+        <xs:complexType>
+            <xs:attribute name="name"     type="xs:string"   use="required"/>
+            <xs:attribute name="dataType" type="sqlDataType" use="required"/>
+            <xs:attribute name="value"    type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:simpleType name="sqlDataType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="string"/>
+            <xs:enumeration value="integer"/>
+            <xs:enumeration value="double"/>
+            <xs:enumeration value="boolean"/>
+            <xs:enumeration value="date"/>
+            <xs:enumeration value="time"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

@@ -1,15 +1,10 @@
-.PHONY: test
+.PHONY: test coverage
+
+xlsx2sql: ./cmd/xlsx2sql/main.go
+	@go build -o $@ $<
+
 test:
-	go test -covermode=count -coverprofile=count.out ./...
+	@go test -covermode=count -coverprofile=count.out ./...
 
-.PHONY: coverage
 coverage: test
-	go tool cover -html=count.out
-
-.PHONY: build
-build:
-	go build -o ./xlsx2sql ./cmd/xlsx2sql/*
-
-.PHONY: run
-run: build
-	./xlsx2sql -m ./configs/mapping-template.xml
+	@go tool cover -html=count.out

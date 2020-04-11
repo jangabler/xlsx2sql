@@ -4,3 +4,5 @@ count.out
 vendor/
 xlsx2sql
 !xlsx2sql/
+xlsxgen
+!xlsxgen/

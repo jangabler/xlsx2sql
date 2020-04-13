@@ -1,10 +1,10 @@
-.PHONY: test coverage
+.PHONY: clean test coverage
 
-xlsx2sql: ./cmd/xlsx2sql/main.go
+%: ./cmd/%/main.go
 	@go build -o $@ $<
 
-xlsxgen: ./cmd/xlsxgen/main.go
-	@go build -o $@ $<
+clean:
+	@rm -f ./xlsx2sql ./xlsxgen
 
 test:
 	@go test -covermode=count -coverprofile=count.out ./...

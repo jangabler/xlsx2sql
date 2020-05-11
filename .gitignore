@@ -6,3 +6,4 @@ xlsx2sql
 !xlsx2sql/
 xlsxgen
 !xlsxgen/
+test/data/*.xlsx

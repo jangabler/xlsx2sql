@@ -57,5 +57,5 @@ $ xlsx2sql -m mapping.xml | mysql -u user_name -p your_password db_name
 
 | Package name | License |
 | --- | --- |
-| [github.com/360EntSecGroup-Skylar/excelize](https://github.com/360EntSecGroup-Skylar/excelize) | [BSD 3-Clause License](https://raw.githubusercontent.com/360EntSecGroup-Skylar/excelize/master/LICENSE) |
-| [github.com/stretchr/testify](https://github.com/stretchr/testify) | [MIT License](https://raw.githubusercontent.com/stretchr/testify/master/LICENSE) |
+| [github.com/360EntSecGroup-Skylar/excelize](https://github.com/360EntSecGroup-Skylar/excelize) | [![GitHub license](https://img.shields.io/github/license/360EntSecGroup-Skylar/excelize)](https://github.com/360EntSecGroup-Skylar/excelize/blob/master/LICENSE) |
+| [github.com/stretchr/testify](https://github.com/stretchr/testify) | [![GitHub license](https://img.shields.io/github/license/stretchr/testify)](https://github.com/stretchr/testify/blob/master/LICENSE) |

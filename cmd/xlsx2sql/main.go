@@ -11,6 +11,7 @@ import (
 )
 
 var (
+	// Mapping is the mapping definition file in XML format.
 	Mapping = flag.String("m", "", "Mapping definition file in XML format.")
 )
 

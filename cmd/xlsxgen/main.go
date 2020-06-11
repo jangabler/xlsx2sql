@@ -10,6 +10,7 @@ import (
 )
 
 var (
+	// Number is the number of generated Excel files.
 	Number = flag.Int(
 		"n",
 		10,

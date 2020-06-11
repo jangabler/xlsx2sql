@@ -2,6 +2,7 @@
 
 ![GitHub](https://img.shields.io/github/license/jangabler/xlsx2sql)
 ![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/jangabler/xlsx2sql)
+[![Go Report Card](https://goreportcard.com/badge/github.com/jangabler/xlsx2sql)](https://goreportcard.com/report/github.com/jangabler/xlsx2sql)
 
 Extract data from MS Excel files and generate SQL `INSERT INTO` statements by the use of a declarative mapping.
 

@@ -7,6 +7,10 @@ import (
 	"github.com/jangabler/xlsx2sql/pkg/mapping"
 )
 
+var (
+	openFile = excelize.OpenFile
+)
+
 // Extractor holds all insert into statements.
 type Extractor struct {
 	Results []mapping.SQL
@@ -24,8 +28,7 @@ func (e *Extractor) Run(m mapping.Mapping) {
 	// Iterate over all files with there worksheets and fill Result slice of
 	// Extractor struct.
 	for _, p := range paths {
-		xlsx, err := excelize.OpenFile(p)
-		// TODO: cover error with an unit test
+		xlsx, err := openFile(p)
 		if err != nil {
 			continue
 		}

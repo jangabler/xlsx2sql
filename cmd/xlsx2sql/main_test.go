@@ -1,11 +1,12 @@
 package main
 
 import (
+	"os"
 	"testing"
 )
 
 func TestMain(m *testing.M) {
-	// TODO: implement unit test
+	os.Exit(m.Run())
 }
 
 func TestUsage(t *testing.T) {

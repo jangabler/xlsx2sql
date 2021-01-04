@@ -61,3 +61,4 @@ $ xlsx2sql -m mapping.xml | mysql -u user_name -p your_password db_name
 | --- | --- |
 | [github.com/360EntSecGroup-Skylar/excelize](https://github.com/360EntSecGroup-Skylar/excelize) | [![GitHub license](https://img.shields.io/github/license/360EntSecGroup-Skylar/excelize)](https://github.com/360EntSecGroup-Skylar/excelize/blob/master/LICENSE) |
 | [github.com/stretchr/testify](https://github.com/stretchr/testify) | [![GitHub license](https://img.shields.io/github/license/stretchr/testify)](https://github.com/stretchr/testify/blob/master/LICENSE) |
+| [github.com/zenizh/go-capturer](https://github.com/zenizh/go-capturer) | [![GitHub license](https://img.shields.io/github/license/zenizh/go-capturer)](https://github.com/zenizh/go-capturer/blob/master/LICENSE) |

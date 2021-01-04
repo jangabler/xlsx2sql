@@ -16,11 +16,16 @@ var (
 )
 
 func main() {
+	os.Exit(run())
+}
+
+func run() int {
 	// Input
 	flag.Usage = usage
 	flag.Parse()
 	if len(*Mapping) == 0 {
 		usage()
+		return 2
 	}
 
 	// Process
@@ -37,9 +42,9 @@ func main() {
 		stmt := s.GenerateInsertIntoStmt()
 		fmt.Println(stmt)
 	}
+	return 0
 }
 
 func usage() {
 	flag.PrintDefaults()
-	os.Exit(2)
 }

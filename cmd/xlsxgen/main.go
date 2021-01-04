@@ -19,6 +19,10 @@ var (
 )
 
 func main() {
+	os.Exit(run())
+}
+
+func run() int {
 	flag.Parse()
 	workingDir, err := os.Getwd()
 	if err != nil {
@@ -49,6 +53,7 @@ func main() {
 			panic(err)
 		}
 	}
+	return 0
 }
 
 func getRandString() string {

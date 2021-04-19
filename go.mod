@@ -1,6 +1,6 @@
 module github.com/jangabler/xlsx2sql
 
-go 1.15
+go 1.16
 
 require (
 	github.com/360EntSecGroup-Skylar/excelize/v2 v2.4.0
